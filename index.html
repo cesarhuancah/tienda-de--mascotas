@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria</title>
-    <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header, footer { background-color: #f4f4f4; padding: 20px; text-align: center; }
-        nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
-        main { padding: 20px; max-width: 800px; margin: 0 auto; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>  
+<body>
+
     <header>
-        <h1>Veterinaria</h1>     
+        <h1>Veterinaria</h1>
         <nav>
-            <a href="#">Inicio</a> | 
-            <a href="#">Servicios</a> | 
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
             <a href="#">Contacto</a>
         </nav>
     </header>
@@ -24,17 +20,44 @@
     <main>
         <h2>Cuidamos a tu mejor amigo</h2>
         <p>Bienvenidos al sistema para gestión de mascotas.</p>
-        
-        <h3>Nuestros Servicios:</h3>
-        <ul>
-            <li>Consulta médica general</li>
-            <li>Vacunación y desparasitación</li>
-            <li>Inventario de productos</li>
-        </ul>
+
+        <!-- 3. Sección de Servicios convertida en Tarjeta -->
+        <section class="tarjeta">
+            <h3>Nuestros Servicios:</h3>
+            <ul>
+                <li>Consulta médica general</li>
+                <li>Vacunación y desparasitación</li>
+                <li>Inventario de productos</li>
+            </ul>
+        </section>
+
+      
+        <section class="tarjeta">
+            <h3>Contáctanos</h3>
+            <form action="#" method="POST" class="formulario-contacto">
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
-    
+
     <footer>
-        <p> 2026 Veterinaria - ubicacado en CBBA-de la blanco galindo km 11</p>
+        <p>&copy; 2026 Veterinaria - Ubicado en CBBA - Av. Blanco Galindo km 11</p>
     </footer>
+
 </body>
 </html>
