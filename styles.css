@@ -1,22 +1,18 @@
-
 body {
-    background-color: #f4f9f4; /* Fondo suave (tonos verdes de veterinaria) */
-    color: #2c3e50;            /* Color de letra legible y oscuro */
+    background-color: #f4f9f4;
+    color: #2c3e50;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;          /* Interlineado solicitado */
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
-
 main {
     max-width: 800px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Aire a los lados en pantallas grandes */
 }
-
-
 header {
-    background-color: #2ecc71; /* Color principal del negocio */
+    background-color: #2ecc71;
     color: white;
     padding: 30px 20px;
     text-align: center;
@@ -24,38 +20,42 @@ header {
 }
 
 header h1 {
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
 }
 
-nav a {
+/* 2. Control de navegación con Flexbox */
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.menu-navegacion a {
+    display: inline-block; 
     color: white;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px;
+    padding: 8px 16px;
     border-radius: 4px;
     transition: background 0.3s;
 }
 
-nav a:hover {
-    background-color: #27ae60; /* Efecto visual al pasar el cursor */
+.menu-navegacion a:hover {
+    background-color: #27ae60;
 }
-
-
 .tarjeta {
     background-color: #ffffff;
-    border: 1px solid #e0e0e0; /* Borde sutil */
-    border-radius: 8px;        /* Bordes redondeados (radio) */
-    padding: 25px;             /* Espacio interno (aire) */
-    margin-bottom: 25px;       /* Separación entre tarjetas */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-
-/* --- 4. Maquetación del Formulario --- */
 .formulario-contacto {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio uniforme entre campos */
+    gap: 15px;
 }
 
 .grupo-campo {
@@ -76,7 +76,6 @@ nav a:hover {
     border-radius: 4px;
     font-family: inherit;
 }
-
 .formulario-contacto button {
     background-color: #2ecc71;
     color: white;
@@ -88,12 +87,9 @@ nav a:hover {
     cursor: pointer;
     transition: background 0.2s;
 }
-
 .formulario-contacto button:hover {
     background-color: #27ae60;
 }
-
-/* --- Footer --- */
 footer {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -101,4 +97,24 @@ footer {
     text-align: center;
     margin-top: 40px;
     font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+
+    .menu-navegacion {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-navegacion a {
+        width: 100%; 
+        box-sizing: border-box;
+        text-align: center;
+    }
+    main {
+        padding: 0 12px;
+    }
+    .tarjeta {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 }
