@@ -34,7 +34,8 @@
 
         <section class="tarjeta">
             <h3>Contáctanos</h3>
-            <form action="#" method="POST" class="formulario-contacto">
+            
+            <form action="#" method="POST" id="form-pedido" class="formulario-contacto" novalidate>
                 <div class="grupo-campo">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
@@ -49,6 +50,8 @@
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
                 </div>
+
+               <p id="error-pedido" class="aviso"></p>
 
                 <button type="submit">Enviar</button>
             </form>
