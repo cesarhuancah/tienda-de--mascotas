@@ -1,4 +1,3 @@
-// === LÓGICA DEL MODO OSCURO ===
 const cuerpo = document.querySelector("body");
 const botonModo = document.querySelector("#btn-tema");
 
@@ -29,8 +28,6 @@ if (botonModo) {
     botonModo.addEventListener("click", alternarModo);
 }
 
-
-// === LÓGICA DE VALIDACIÓN Y ENVÍO INTELIGENTE ===
 const formularioPedido = document.querySelector(".formulario-contacto");
 const avisoPedido = document.querySelector("#error-pedido");
 
@@ -48,9 +45,6 @@ if (formularioPedido) {
         const inputCorreo = document.querySelector("#correo");
         const inputMensaje = document.querySelector("#mensaje");
         
-        // ----------------------------------------------------
-        // CASO A: VALIDACIÓN PARA EL REGISTRO DE MASCOTAS (Inicio)
-        // ----------------------------------------------------
         if (inputNombreMascota && inputEspecie && inputPropietario) {
             if (inputNombreMascota.value.trim() === "") {
                 avisoPedido.textContent = "Falta el nombre de la mascota, caserito.";
@@ -71,10 +65,6 @@ if (formularioPedido) {
                 }, 1000);
             }
         }
-        
-        // ----------------------------------------------------
-        // CASO B: VALIDACIÓN PARA EL FORMULARIO DE CONTACTO
-        // ----------------------------------------------------
         else if (inputNombreContacto && inputCorreo && inputMensaje) {
             const nombre = inputNombreContacto.value.trim();
             const correo = inputCorreo.value.trim();
