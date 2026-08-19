@@ -20,17 +20,11 @@
     <main>
         <h2>Cuidamos a tu mejor amigo</h2>
         <p>Bienvenidos al sistema para gestión de mascotas.</p>
-
-        <!-- Alerta de éxito de Laravel al registrar -->
         @if(session('exito'))
             <p style="color: green; font-weight: bold; background: #e6f4ea; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
                 {{ session('exito') }}
             </p>
         @endif
-
-        <!-- ======================================================= -->
-        <!-- 1. FORMULARIO DE REGISTRO (ARRIBA) -->
-        <!-- ======================================================= -->
         <section class="tarjeta">
             <h3>Registrar Nueva Mascota</h3>
             <form action="{{ url('/procesar-mascota') }}" method="POST" id="form-mascota" class="formulario-contacto">
@@ -62,10 +56,6 @@
                 <button type="submit">Registrar Mascota</button>
             </form>
         </section>
-
-        <!-- ======================================================= -->
-        <!-- 2. TABLA HISTÓRICA DE PACIENTES (ABAJO) -->
-        <!-- ======================================================= -->
         <section class="tarjeta" style="margin-top: 30px;">
             <h3>📋 Pacientes Registrados en el Sistema</h3>
             
