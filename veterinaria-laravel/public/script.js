@@ -34,9 +34,8 @@ const avisoPedido = document.querySelector("#error-pedido");
 if (formularioPedido) {
     
     function revisarPedido(event) {
-        event.preventDefault(); // Frenamos el envío para validar primero
+        event.preventDefault();
         
-        // Intentamos capturar los elementos de ambas páginas
         const inputNombreMascota = document.querySelector("#nombre-mascota");
         const inputEspecie = document.querySelector("#especie");
         const inputPropietario = document.querySelector("#propietario");
@@ -83,7 +82,6 @@ if (formularioPedido) {
                 avisoPedido.textContent = "Enviando consulta al equipo médico...";
                 avisoPedido.className = "aviso exito";
                 
-                // Forzamos el envío real de los datos hacia Laravel tras 1 segundo
                 setTimeout(() => {
                     formularioPedido.submit();
                 }, 1000);
